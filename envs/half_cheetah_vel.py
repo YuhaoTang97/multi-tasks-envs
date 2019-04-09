@@ -1,6 +1,7 @@
 import numpy as np
 from .half_cheetah import HalfCheetahEnv
 
+
 class HalfCheetahVelEnv(HalfCheetahEnv):
     """Half-cheetah environment with target velocity, as described in [1]. The
     code is adapted from

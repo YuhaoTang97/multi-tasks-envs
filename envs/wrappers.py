@@ -2,7 +2,7 @@ import numpy as np
 from gym import Env
 from gym.spaces import Box
 
-from core.serializable import Serializable
+from util.serializable import Serializable
 
 
 class ProxyEnv(Serializable, Env):
