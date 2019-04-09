@@ -3,6 +3,7 @@ import numpy as np
 from envs.ant import AntEnv
 # from gym.envs.mujoco.ant import AntEnv
 
+
 class MultitaskAntEnv(AntEnv):
     def __init__(self, task={}, n_tasks=2, **kwargs):
         self._task = task
