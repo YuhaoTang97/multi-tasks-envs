@@ -127,6 +127,6 @@ if __name__ == "__main__":
             use_automatic_entropy_tuning=True,
         ),
     )
-    setup_logger('name-of-experiment', variant=variant)
-    # ptu.set_gpu_mode(True)  # optionally set the GPU (default=False)
+    setup_logger('antdir-task-1-of-experiment', variant=variant)
+    ptu.set_gpu_mode(True)  # optionally set the GPU (default=False)
     experiment(variant)
