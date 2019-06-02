@@ -7,6 +7,7 @@ class AntDirEnv(MultitaskAntEnv):
 
     def __init__(self, task={}, n_tasks=2, forward_backward=False, **kwargs):
         self.forward_backward = forward_backward
+        self.quick_init(locals())
         super(AntDirEnv, self).__init__(task, n_tasks, **kwargs)
 
     def step(self, action):
