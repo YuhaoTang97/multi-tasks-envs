@@ -29,6 +29,7 @@ def experiment(variant):
                   tasks_id=task_params['tasks_id'],
                   )
     )
+    print("Goal: ", expl_env._goal)
     obs_dim = expl_env.observation_space.low.size
     action_dim = eval_env.action_space.low.size
 
@@ -102,10 +103,10 @@ if __name__ == "__main__":
         replay_buffer_size=int(1E6),
         task_params=dict(
             n_tasks=2,  # 20 works pretty well
-            forward_backward=False,
+            forward_backward=True,
             randomize_tasks=True,
             low_gear=False,
-            tasks_id=0,
+            tasks_id=1,
         ),
         algorithm_kwargs=dict(
             num_epochs=3000,
