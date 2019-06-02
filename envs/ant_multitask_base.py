@@ -3,12 +3,11 @@ import numpy as np
 from envs.ant import AntEnv
 # from gym.envs.mujoco.ant import AntEnv
 
-
 class MultitaskAntEnv(AntEnv):
-    def __init__(self, task={}, n_tasks=2, **kwargs):
+    def __init__(self, task={}, n_tasks=2, tasks_id=0, **kwargs):
         self._task = task
         self.tasks = self.sample_tasks(n_tasks)
-        self._goal = self.tasks[0]['goal']
+        self._goal = self.tasks[tasks_id]['goal']
         super(MultitaskAntEnv, self).__init__(**kwargs)
 
     """
